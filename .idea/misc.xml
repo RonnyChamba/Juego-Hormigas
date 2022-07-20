@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/ProyectosAndroid/JuegoHormigas/app/src/main/res/drawable/boton_personalizado.xml" value="0.135" />
+        <entry key="..\:/ProyectosAndroid/JuegoHormigas/app/src/main/res/layout/activity_main.xml" value="0.18333333333333332" />
+        <entry key="..\:/ProyectosAndroid/JuegoHormigas/app/src/main/res/layout/activity_registro.xml" value="0.20416666666666666" />
         <entry key="..\:/ProyectosAndroid/JuegoHormigas/app/src/main/res/layout/activity_splash.xml" value="0.20416666666666666" />
       </map>
     </option>

@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JuegoHormigas">
         <activity
+            android:name=".Menu"
+            android:exported="false" />
+        <activity
+            android:name=".Registro"
+            android:exported="false" />
+        <activity
             android:name=".Splash"
             android:exported="true">
             <intent-filter>
@@ -18,8 +24,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".MainActivity" />
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>

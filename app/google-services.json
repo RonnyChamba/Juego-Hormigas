@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "10585452549",
+    "project_id": "juego-hormigas",
+    "storage_bucket": "juego-hormigas.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:10585452549:android:9b23a84101358ef7b2ac6c",
+        "android_client_info": {
+          "package_name": "com.example.juegohormigas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "10585452549-n2obn2fs0l5cophr9ou6ef0tmivd4eo5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHFO7xX99j2DgLTZISh2dHWhooIL5c3w8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "10585452549-n2obn2fs0l5cophr9ou6ef0tmivd4eo5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
