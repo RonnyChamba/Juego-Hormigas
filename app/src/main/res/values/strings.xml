@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">JuegoHormigas</string>
+
+    <dimen name="sizeTitle">25dp</dimen>
+
+    <!-- Main Activity-->
+    <string name="btnLogin">Login</string>
+    <string name="btnRegistro">Registro</string>
+
+    <!-- Nuevo Jugador -->
+    <string name="txtTitleRegistro">Registro</string>
+    <string name="txtNombre">Nombre</string>
+    <string name="txtEmail">Email</string>
+    <string name="txtPassword">Contraseña</string>
+    <string name="btnRegistrar">Registrar</string>
+    <string name="txtFecha">Fecha</string>
+
+    <dimen name="mg_tb">10dp</dimen>
+
+    <!-- Activity Login-->
+
+    <string name="txtTitleLogin">Login</string>
+    <string name="txtCorreoLogin">Correo Electrónico</string>
+    <string name="txtPassLogin">Contraseña</string>
+    <string name="txtBtnLogin">Ingresar</string>
+
+    <!-- Activity Menu-->
+    <string name="txtTitleMenu">MI PUNTUACION</string>
+    <string name="txtSubTitleMenu">MENU</string>
+
+    <string name="btnJugarMenu">JUGAR</string>
+    <string name="btnPuntuMenu">PUNTUACIONES</string>
+    <string name="btnAcercaMenu">ACERCA DE</string>
+    <string name="btnSalirMenu">SALIR</string>
+</resources>
