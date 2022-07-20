@@ -16,6 +16,7 @@
     <string name="txtFecha">Fecha</string>
 
     <dimen name="mg_tb">10dp</dimen>
+    <dimen name="btnFontSize">18dp</dimen>
 
     <!-- Activity Login-->
 
@@ -32,4 +33,11 @@
     <string name="btnPuntuMenu">PUNTUACIONES</string>
     <string name="btnAcercaMenu">ACERCA DE</string>
     <string name="btnSalirMenu">SALIR</string>
+    <!-- GAMEOVER-->
+    <string name="seacaboTxt">¡Se acabo el tiempo!</string>
+    <string name="hasMatadoTxt">Has Matado</string>
+    <string name="numeroTxt">--</string>
+    <string name="jugarDeNuevo">JUGAR DE NUEVO</string>
+    <string name="irMenu">MENU</string>
+    <string name="puntajes">VER PUNTAJES</string>
 </resources>

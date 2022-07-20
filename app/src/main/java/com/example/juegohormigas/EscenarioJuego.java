@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
 import android.view.Display;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -36,16 +37,13 @@ public class EscenarioJuego extends AppCompatActivity {
         tvTiempo = findViewById(R.id.txtTiempoEsc);
         imgZombie = findViewById(R.id.imgJuego);
         Bundle intent = getIntent().getExtras();
-
-
         uId = intent.getString("uId");
         nombre = intent.getString("nombres");
         email = intent.getString("email");
         zombie = intent.getString("zombie");
-
-
         tvNombre.setText(nombre);
         tvContador.setText(zombie);
+        miDialog = new Dialog(EscenarioJuego.this);
         Typeface fuente = Typeface.createFromAsset(EscenarioJuego.this.getAssets(), "fuentes/zombie.TTF");
 
         tvNombre.setTypeface(fuente);
@@ -80,6 +78,7 @@ public class EscenarioJuego extends AppCompatActivity {
             public void onFinish() {
                 tvTiempo.setText("0s");
                 gameOver = true;
+                mensajeGameOver();
 
             }
         }.start();
@@ -105,5 +104,35 @@ public class EscenarioJuego extends AppCompatActivity {
         int randomY = aleatorio.nextInt(((maxY - min) + 1) + min);
         imgZombie.setX(randomX);
         imgZombie.setY(randomY);
+    }
+    private void mensajeGameOver() {
+
+        Typeface typeface = Typeface.createFromAsset(EscenarioJuego.this.getAssets(), "fuentes/zombie.TTF");
+
+        TextView seAcaboTxt, hasMatadoTxt, numeroTxt;
+        Button jugarDeNuevo, irMenu, puntajes;
+
+        miDialog.setContentView(R.layout.gameover);
+        miDialog.setCancelable(false);
+
+        seAcaboTxt = miDialog.findViewById(R.id.seacaboTxt);
+        hasMatadoTxt = miDialog.findViewById(R.id.hasMatadoTxt);
+        numeroTxt = miDialog.findViewById(R.id.numeroTxt);
+
+        jugarDeNuevo = miDialog.findViewById(R.id.jugarDeNuevo);
+        irMenu = miDialog.findViewById(R.id.irMenu);
+        puntajes = miDialog.findViewById(R.id.puntajes);
+
+        String zombies = String.valueOf(contador);
+        numeroTxt.setText(zombies);
+
+        seAcaboTxt.setTypeface(typeface);
+        hasMatadoTxt.setTypeface(typeface);
+        numeroTxt.setTypeface(typeface);
+        jugarDeNuevo.setTypeface(typeface);
+        irMenu.setTypeface(typeface);
+        puntajes.setTypeface(typeface);
+        miDialog.show();
+
     }
 }
