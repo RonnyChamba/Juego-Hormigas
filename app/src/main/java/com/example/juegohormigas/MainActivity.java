@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         btnRegistro = findViewById(R.id.btnRegistro);
 
         btnLogin.setOnClickListener( (event) -> {
-            Intent intent = new Intent(this, MainActivity.class);
+            Intent intent = new Intent(this, Login.class);
             startActivity(intent);
         });
 
