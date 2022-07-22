@@ -38,13 +38,15 @@
                 android:layout_marginBottom="@dimen/mg_tb"
                 android:textStyle="bold"
                 android:text="3"/>
+
             <ImageView
-                android:id="@+id/imageView4"
+                android:id="@+id/imageGif"
                 android:layout_gravity="center"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:layout_marginBottom="@dimen/mg_tb"
-                app:srcCompat="@drawable/foto_1" />
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:adjustViewBounds="true" />
             <TextView
                 android:id="@+id/txtUidMenu"
                 android:layout_width="wrap_content"

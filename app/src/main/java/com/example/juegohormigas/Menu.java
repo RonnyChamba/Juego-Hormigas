@@ -5,11 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.net.Uri;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -30,6 +33,8 @@ public class Menu extends AppCompatActivity {
     FirebaseDatabase database;
     DatabaseReference jugadores;
 
+    ImageView imagen;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +50,7 @@ public class Menu extends AppCompatActivity {
         btnPuntuacion = findViewById(R.id.btnPuntaciones);
         btnAcercaDe = findViewById(R.id.btnHacerca);
         btnCerrarSesion = findViewById(R.id.btnCerrarSesion);
+        imagen = findViewById(R.id.imageGif);
 
         auth = FirebaseAuth.getInstance();
         user = auth.getCurrentUser();
@@ -81,9 +87,12 @@ public class Menu extends AppCompatActivity {
         btnPuntuacion.setTypeface(fuentes);
         btnAcercaDe.setTypeface(fuentes);
         btnCerrarSesion.setTypeface(fuentes);
-
-
         btnCerrarSesion.setOnClickListener((event) -> cerrarSesion());
+
+        String url = "https://www.gifsanimados.org/data/media/183/hormiga-imagen-animada-0064.gif";
+        Uri urlParse = Uri.parse(url);
+        Glide.with(getApplicationContext()).load(urlParse).into(imagen);
+
     }
     @Override
     protected void onStart() {

@@ -20,11 +20,13 @@
             android:layout_weight="1"
             app:srcCompat="@drawable/foto_1"/>
         <TextView
+            android:id="@+id/txTitulo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center"
             android:textSize="30sp"
             android:textStyle="bold"
+            android:textColor="@color/color_botones"
             android:text="Mata Hormigas"/>
     </LinearLayout>
 
