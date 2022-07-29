@@ -17,6 +17,7 @@
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/black"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -64,6 +65,18 @@
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:layout_marginBottom="3dp">
+
+            <ImageView
+                android:id="@+id/img_iniciarJuego"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_home"/>
+        </LinearLayout>
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="match_parent"

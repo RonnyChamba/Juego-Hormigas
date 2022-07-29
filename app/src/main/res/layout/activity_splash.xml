@@ -28,6 +28,16 @@
             android:textStyle="bold"
             android:textColor="@color/color_botones"
             android:text="Mata Hormigas"/>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieMovimiento"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:textAlignment="center"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="cargando.json"
+            app:lottie_imageAssetsFolder="assets"
+            app:lottie_loop="true" />
     </LinearLayout>
 
 </LinearLayout>

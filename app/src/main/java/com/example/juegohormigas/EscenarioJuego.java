@@ -1,6 +1,8 @@
 package com.example.juegohormigas;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.app.Dialog;
 import android.graphics.Point;
@@ -12,7 +14,15 @@ import android.view.Display;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Random;
 
 public class EscenarioJuego extends AppCompatActivity {
@@ -23,9 +33,16 @@ public class EscenarioJuego extends AppCompatActivity {
     ImageView imgZombie;
     int anchoPantalla, altoPantalla;
     int contador = 0;
-    boolean gameOver;
+    boolean gameOver = true;
     Dialog miDialog;
 
+    private FirebaseAuth auth;
+    private FirebaseDatabase dataBase;
+    private DatabaseReference dbReference;
+    private FirebaseUser user;
+
+
+    ImageView iniciarJuego;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +53,13 @@ public class EscenarioJuego extends AppCompatActivity {
         tvNombre = findViewById(R.id.txtNombreEs);
         tvTiempo = findViewById(R.id.txtTiempoEsc);
         imgZombie = findViewById(R.id.imgJuego);
+
+        iniciarJuego = findViewById(R.id.img_iniciarJuego);
+
+        initFirebase();
         Bundle intent = getIntent().getExtras();
+
+
         uId = intent.getString("uId");
         nombre = intent.getString("nombres");
         email = intent.getString("email");
@@ -62,7 +85,21 @@ public class EscenarioJuego extends AppCompatActivity {
                 }), 500);
             }
         });
-        cuentaAtras();
+
+        iniciarJuego.setOnClickListener( (event) ->{
+            Toast.makeText(this, "Juego iniciado", Toast.LENGTH_SHORT).show();
+            gameOver = false;
+            cuentaAtras();
+
+        });
+
+    }
+
+    private void  initFirebase(){
+        auth = FirebaseAuth.getInstance();
+        user = auth.getCurrentUser();
+        dataBase = FirebaseDatabase.getInstance();
+        dbReference = dataBase.getReference(Constantes.NAME_BD);
     }
 
     private void cuentaAtras() {
@@ -78,12 +115,23 @@ public class EscenarioJuego extends AppCompatActivity {
             public void onFinish() {
                 tvTiempo.setText("0s");
                 gameOver = true;
-                mensajeGameOver();
+                updateDataPlayer();
+                dialogSms();
 
             }
         }.start();
     }
 
+
+    private  void updateDataPlayer(){
+
+        Map<String, Object> data =  new HashMap<>();
+        data.put("Zombies", contador);
+        dbReference.child(user.getUid()).updateChildren(data).addOnCompleteListener( (task) ->{
+            Toast.makeText(this, "El puntaje ha sido actualizado correctamente", Toast.LENGTH_SHORT).show();
+        });
+
+    }
     private void pantalla() {
 
         Display display = getWindowManager().getDefaultDisplay();
@@ -105,34 +153,18 @@ public class EscenarioJuego extends AppCompatActivity {
         imgZombie.setX(randomX);
         imgZombie.setY(randomY);
     }
-    private void mensajeGameOver() {
+    private void dialogSms(){
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        DialogFragment  dialog = new DialogFragment(String.valueOf(contador));
+        dialog.setCancelable(false);
 
-        Typeface typeface = Typeface.createFromAsset(EscenarioJuego.this.getAssets(), "fuentes/zombie.TTF");
-
-        TextView seAcaboTxt, hasMatadoTxt, numeroTxt;
-        Button jugarDeNuevo, irMenu, puntajes;
-
-        miDialog.setContentView(R.layout.gameover);
-        miDialog.setCancelable(false);
-
-        seAcaboTxt = miDialog.findViewById(R.id.seacaboTxt);
-        hasMatadoTxt = miDialog.findViewById(R.id.hasMatadoTxt);
-        numeroTxt = miDialog.findViewById(R.id.numeroTxt);
-
-        jugarDeNuevo = miDialog.findViewById(R.id.jugarDeNuevo);
-        irMenu = miDialog.findViewById(R.id.irMenu);
-        puntajes = miDialog.findViewById(R.id.puntajes);
-
-        String zombies = String.valueOf(contador);
-        numeroTxt.setText(zombies);
-
-        seAcaboTxt.setTypeface(typeface);
-        hasMatadoTxt.setTypeface(typeface);
-        numeroTxt.setTypeface(typeface);
-        jugarDeNuevo.setTypeface(typeface);
-        irMenu.setTypeface(typeface);
-        puntajes.setTypeface(typeface);
-        miDialog.show();
-
+        contador = 0;
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        // For a little polish, specify a transition animation
+        transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+        // To make it fullscreen, use the 'content' root view as the container
+        // for the fragment, which is always the root view for the activity
+        transaction.add(android.R.id.content, dialog)
+                .addToBackStack(null).commit();
     }
 }
