@@ -132,7 +132,7 @@ public class Menu extends AppCompatActivity {
         });
         btnPuntuacion.setOnClickListener((event) -> {
 
-            // startActivity( new Intent(this, Puntajes.class));
+            startActivity( new Intent(this, Puntajes.class));
         });
         btnAcercaDe.setOnClickListener((event) -> {
             //openDialogAbouth();
