@@ -48,26 +48,28 @@
             android:layout_marginBottom="@dimen/mg_tb"
             android:text=""
             android:textAlignment="center"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="@dimen/sizeTitle" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_vertical"
             android:layout_marginBottom="@dimen/mg_tb"
+            android:gravity="center"
             android:orientation="horizontal">
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="5dp"
                 android:src="@drawable/ic_email" />
+
             <TextView
                 android:id="@+id/txtEmailDetalle"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=""
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="@dimen/btnFontSize" />
         </LinearLayout>
 
@@ -75,8 +77,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_vertical"
             android:layout_marginBottom="@dimen/mg_tb"
+            android:gravity="center"
             android:orientation="horizontal">
 
             <ImageView
@@ -87,10 +89,10 @@
 
             <TextView
                 android:id="@+id/txtPaisDetalle"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=""
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="@dimen/btnFontSize" />
 
         </LinearLayout>
@@ -99,8 +101,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_vertical"
             android:layout_marginBottom="@dimen/mg_tb"
+            android:gravity="center"
             android:orientation="horizontal">
 
             <ImageView
@@ -111,10 +113,10 @@
 
             <TextView
                 android:id="@+id/txtEdadDetalle"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=""
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="@dimen/btnFontSize" />
 
 
@@ -123,7 +125,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_vertical"
+            android:gravity="center"
             android:orientation="horizontal">
 
             <ImageView
@@ -134,10 +136,10 @@
 
             <TextView
                 android:id="@+id/txtFechaDetalle"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=""
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="@dimen/btnFontSize" />
         </LinearLayout>
 
@@ -146,9 +148,11 @@
             android:id="@+id/btnHomeDetalle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/boton_personalizado"
             android:text="Ir al menu"
-            app:icon="@drawable/ic_home"/>
+            app:backgroundTint="@null"
+            app:icon="@drawable/ic_home" />
     </androidx.appcompat.widget.LinearLayoutCompat>
 
 </RelativeLayout>

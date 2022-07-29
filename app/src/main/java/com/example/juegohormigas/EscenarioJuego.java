@@ -81,7 +81,7 @@ public class EscenarioJuego extends AppCompatActivity {
                 imgZombie.setImageResource(R.drawable.foto_2);
                 new Handler().postDelayed((() -> {
                     movimiento();
-                    imgZombie.setImageResource(R.drawable.foto_1);
+                    imgZombie.setImageResource(R.drawable.hormiga_agujero);
                 }), 500);
             }
         });
