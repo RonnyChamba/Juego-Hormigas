@@ -148,7 +148,7 @@ public class Menu extends AppCompatActivity {
         });
 
         btnCambiasPass.setOnClickListener((event) -> {
-            //startActivity( new Intent(Menu.this, CambioPassword.class));
+            startActivity( new Intent(Menu.this, CambioPassword.class));
         });
 
 
