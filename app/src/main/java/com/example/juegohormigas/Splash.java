@@ -17,6 +17,7 @@ public class Splash extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
 
         txtTitle = findViewById(R.id.txTitulo);
+
         Typeface typeface = Typeface.createFromAsset(Splash.this.getAssets(), "fuentes/zombie.TTF");
         txtTitle.setTypeface(typeface);
 

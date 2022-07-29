@@ -89,6 +89,36 @@
                 android:hint="@string/txtNombre"/>
         </com.google.android.material.textfield.TextInputLayout>
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/mg_tb">
+
+            <EditText
+                android:id="@+id/txtEdad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:inputType="number"
+                android:textColor="@color/color_botones"
+                android:hint="@string/txtEdad" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/mg_tb">
+            <Spinner
+                android:id="@+id/txtPais"
+                android:layout_width="match_parent"
+                android:entries="@array/lisPaises"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:textColor="@color/color_fondo"
+                android:hint="@string/txtPais"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
         <TextView
             android:id="@+id/txtFecha"
             android:layout_width="match_parent"

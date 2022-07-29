@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">JuegoHormigas</string>
 
-    <dimen name="sizeTitle">25dp</dimen>
+    <dimen name="sizeTitle">25sp</dimen>
 
     <!-- Main Activity-->
     <string name="btnLogin">Login</string>
@@ -10,14 +10,24 @@
     <!-- Nuevo Jugador -->
     <string name="txtTitleRegistro">Registro</string>
     <string name="txtNombre">Nombre</string>
+    <string name="txtEdad">Edad</string>
+    <string name="txtPais">Pais</string>
     <string name="txtEmail">Email</string>
     <string name="txtPassword">Contraseña</string>
     <string name="btnRegistrar">Registrar</string>
     <string name="txtFecha">Fecha</string>
+    <string-array name="lisPaises">
+
+
+        <item>Ecuador</item>
+        <item>Colombia</item>
+        <item>Peru</item>
+        <item>Venezuela</item>
+        <item>Argentina</item>
+    </string-array>
 
     <dimen name="mg_tb">10dp</dimen>
     <dimen name="btnFontSize">18dp</dimen>
-
     <!-- Activity Login-->
 
     <string name="txtTitleLogin">Login</string>
@@ -27,12 +37,15 @@
 
     <!-- Activity Menu-->
     <string name="txtTitleMenu">MI PUNTUACION</string>
+    <string name="txtTitlePerfil">MI PERFIL</string>
     <string name="txtSubTitleMenu">MENU</string>
-
     <string name="btnJugarMenu">JUGAR</string>
+    <string name="btnEditar">EDITAR</string>
+    <string name="btnCambiarPass">CAMBIAR CONTRASEÑA</string>
     <string name="btnPuntuMenu">PUNTUACIONES</string>
     <string name="btnAcercaMenu">ACERCA DE</string>
     <string name="btnSalirMenu">SALIR</string>
+
     <!-- GAMEOVER-->
     <string name="seacaboTxt">¡Se acabo el tiempo!</string>
     <string name="hasMatadoTxt">Has Matado</string>
@@ -40,4 +53,11 @@
     <string name="jugarDeNuevo">JUGAR DE NUEVO</string>
     <string name="irMenu">MENU</string>
     <string name="puntajes">VER PUNTAJES</string>
+
+
+    <!-- CAMBIO PASSWORD-->
+    <string name="txtActualPassCambio">Actual Contraseña</string>
+    <string name="txtNuevaPassCambio">Nueva Contraseña</string>
+    <string name="btnPassCambio">Guardar Cambios</string>
+    <string name="txtTitleCambio">Cambiar Contraseña</string>
 </resources>
