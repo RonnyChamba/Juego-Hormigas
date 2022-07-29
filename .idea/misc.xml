@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/ProyectosAndroid/JuegoHormigas/app/src/main/res/drawable/boton_personalizado.xml" value="0.135" />
+        <entry key="..\:/ProyectosAndroid/JuegoHormigas/app/src/main/res/layout/acercade.xml" value="0.33" />
         <entry key="..\:/ProyectosAndroid/JuegoHormigas/app/src/main/res/layout/activity_cambio_password.xml" value="0.25" />
         <entry key="..\:/ProyectosAndroid/JuegoHormigas/app/src/main/res/layout/activity_detalle_jugador.xml" value="0.12291666666666666" />
         <entry key="..\:/ProyectosAndroid/JuegoHormigas/app/src/main/res/layout/activity_escenario_juego.xml" value="0.22" />

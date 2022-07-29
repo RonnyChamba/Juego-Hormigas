@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/txtTituloHacerca"
+            android:text="Desarrolladores"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp"
+            android:textSize="@dimen/sizeTitle"
+             android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Perfil uno -->
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_marginEnd="1dp"
+                android:layout_weight="1">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/pablo"
+                    android:layout_marginBottom="10dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:layout_marginBottom="10dp"
+                    android:textStyle="bold"
+                    android:text="Pablo Navarrete"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:layout_marginBottom="10dp"
+                    android:text="pablo34@gmail.com"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="Santo Domingo"
+                    android:layout_marginBottom="10dp"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="Soltero"
+                    android:layout_marginBottom="10dp"
+                    />
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:src="@drawable/flag_ecuador"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <!-- Perfil dos -->
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:layout_marginStart="1dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/perfil_milena"
+                    android:layout_marginBottom="10dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"
+                    android:text="Milena Mejía"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:layout_marginBottom="10dp"
+                    android:text="milena69@gmail.com"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="ÉL CARMEN"
+                    android:layout_marginBottom="10dp"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="Soltera"
+                    android:layout_marginBottom="10dp"
+                    />
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:src="@drawable/flag_ecuador"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <Button
+            android:id="@+id/btnAcercaoK"
+            android:layout_marginTop="25dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:text="OK"
+            android:textStyle="bold"
+            android:backgroundTint="@color/color_fondo"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</RelativeLayout>

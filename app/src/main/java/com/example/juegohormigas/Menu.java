@@ -6,6 +6,8 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.Manifest;
 import android.content.DialogInterface;
@@ -135,7 +137,7 @@ public class Menu extends AppCompatActivity {
             startActivity( new Intent(this, Puntajes.class));
         });
         btnAcercaDe.setOnClickListener((event) -> {
-            //openDialogAbouth();
+            openDialogAbouth();
         });
 
         btnEditar.setOnClickListener((event) -> {
@@ -178,6 +180,20 @@ public class Menu extends AppCompatActivity {
         Uri urlParse = Uri.parse(url);
         Glide.with(getApplicationContext()).load(urlParse).into(imagen);
 
+    }
+
+    private void openDialogAbouth() {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        DialogFragmentAcerca dialog = new DialogFragmentAcerca();
+        dialog.setCancelable(false);
+
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        // For a little polish, specify a transition animation
+        transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+        // To make it fullscreen, use the 'content' root view as the container
+        // for the fragment, which is always the root view for the activity
+        transaction.add(android.R.id.content, dialog)
+                .addToBackStack(null).commit();
     }
 
 
